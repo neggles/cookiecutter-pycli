@@ -2,7 +2,7 @@
 
 echo "Setting up {{ cookiecutter.project_name }} repo in $(pwd)"
 git init
-git add --quiet .
+git add .
 git commit --quiet --message "Initial commit"
 git tag v{{ cookiecutter.project_version }}
 
@@ -11,7 +11,7 @@ echo "Creating python virtualenv"
 source .venv/bin/activate
 
 echo "Updating pip and setuptools"
-pip install --upgrade --quiet pip setuptools wheel
+pip install --upgrade --quiet pip setuptools wheel setuptools-scm
 
 echo "Installing package in dev mode..."
 pip install --editable '.[dev]'
