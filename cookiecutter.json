@@ -2,7 +2,6 @@
   "author_name": "Some Guy",
   "author_email": "some@address.com",
   "project_name": "Click CLI",
-  "command_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "__package_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
   "description": "{{ cookiecutter.project_name }} is a Python CLI app using Click.",

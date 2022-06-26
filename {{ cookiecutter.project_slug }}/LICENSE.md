@@ -1,4 +1,4 @@
-{% if cookiecutter.choose_a_license == 'MIT' %}
+{% if cookiecutter.choose_a_license == 'MIT' -%}
 MIT License
 
 Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-{% elif cookiecutter.choose_a_license == 'BSD 2-Clause' %}
+{% elif cookiecutter.choose_a_license == 'BSD 2-Clause' -%}
 BSD 2-Clause License
 
 Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-{% elif cookiecutter.choose_a_license == 'GPLv2' %}
+{% elif cookiecutter.choose_a_license == 'GPLv2' -%}
 GNU General Public License v2
 
 Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
@@ -66,7 +66,7 @@ You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-{% elif cookiecutter.choose_a_license == 'GPLv3' %}
+{% elif cookiecutter.choose_a_license == 'GPLv3' -%}
 GNU General Public License v3
 
 Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
@@ -83,11 +83,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
-{%- else -%}
-Copyright (c) {{cookiecutter.author_name}}
-
-All righs reserved.
-{% elif cookiecutter.choose_a_license == 'Apache 2.0' %}
+{% elif cookiecutter.choose_a_license == 'Apache 2.0' -%}
 Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -101,4 +97,8 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-{%- endif -%}
+{% else -%}
+Copyright (c) {{cookiecutter.author_name}}
+
+All rights reserved.
+{% endif -%}

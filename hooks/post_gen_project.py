@@ -20,34 +20,9 @@ def main():
     if "{{ cookiecutter.choose_a_license }}" == "Not open source":
         remove_file("LICENSE.md")
 
-    subprocess.check_call(["git", "init"])
-    subprocess.check_call(["git", "commit", "-a", "-m", "init"])
-    subprocess.check_call(["git", "tag", "v{{ cookiecutter.project_version }}"])
-    subprocess.check_call(["python3", "-m", "virtualenv", ".venv", "--download"])
-    subprocess.check_call(
-        [
-            "source",
-            ".venv/bin/activate",
-            "&&",
-            "python",
-            "-m",
-            "pip",
-            "install",
-            "--upgrade",
-            "pip",
-            "setuptools",
-            "wheel",
-            "&&",
-            "pip",
-            "install",
-            "--editable",
-            ".[dev]",
-            "&&",
-            "python",
-            "-m",
-            "setuptools_scm",
-        ]
-    )
+    print(INFO + "Preparing repository..." + TERMINATOR)
+    subprocess.check_call(["/usr/bin/env", "bash", ".setup.sh"])
+    remove_file(".setup.sh")
 
     print(SUCCESS + "Project initialized! nice." + TERMINATOR)
     sys.exit(0)
