@@ -4,7 +4,7 @@
   "project_name": "Click CLI",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "__package_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
-  "description": "{{ cookiecutter.project_name }} is a Python CLI app using Click.",
+  "description": "{{ cookiecutter.project_name }} is a Python CLI app using Typer.",
   "project_version": "0.0.1",
   "choose_a_license": [
     "MIT",
