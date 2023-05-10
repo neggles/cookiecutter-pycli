@@ -4,8 +4,7 @@ from typing import Optional
 
 import typer
 
-from {{ cookiecutter.__package_name }} import __version__
-from {{ cookiecutter.__package_name }}.console import console, err_console
+from {{ cookiecutter.__package_name }} import __version__, console, err_console
 
 app = typer.Typer()
 

@@ -1,7 +1,7 @@
 {% if cookiecutter.choose_a_license == 'MIT' -%}
 MIT License
 
-Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
+Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.full_name }}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@ SOFTWARE.
 {% elif cookiecutter.choose_a_license == 'BSD 2-Clause' -%}
 BSD 2-Clause License
 
-Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
+Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.full_name }}
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -50,7 +50,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 {% elif cookiecutter.choose_a_license == 'GPLv2' -%}
 GNU General Public License v2
 
-Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
+Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.full_name }}
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -69,7 +69,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 {% elif cookiecutter.choose_a_license == 'GPLv3' -%}
 GNU General Public License v3
 
-Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
+Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.full_name }}
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -84,7 +84,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 {% elif cookiecutter.choose_a_license == 'Apache 2.0' -%}
-Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.author_name }}
+Copyright (c) {% now 'utc', '%Y' %}, {{ cookiecutter.full_name }}
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -98,7 +98,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 {% else -%}
-Copyright (c) {{cookiecutter.author_name}}
+Copyright (c) {{cookiecutter.full_name}}
 
 All rights reserved.
 {% endif -%}

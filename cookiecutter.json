@@ -1,17 +1,20 @@
 {
-  "author_name": "Some Guy",
-  "author_email": "some@address.com",
-  "project_name": "Click CLI",
-  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
-  "__package_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
-  "description": "{{ cookiecutter.project_name }} is a Python CLI app using Typer.",
+  "full_name": "Some Guy",
+  "email": "some@address.com",
+  "github_username": "someguy",
+  "project_name": "Python CLI",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_short_description": "{{ cookiecutter.project_name }}: a python CLI app",
+  "pypi_username": "{{ cookiecutter.github_username }}",
   "project_version": "0.0.1",
   "choose_a_license": [
     "MIT",
-    "BSD 2-Clause",
-    "Apache 2.0",
     "GPLv2",
     "GPLv3",
-    "Not open source"
-  ]
+    "Not open source",
+    "BSD 2-Clause",
+    "Apache 2.0"
+  ],
+
+  "__package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}"
 }

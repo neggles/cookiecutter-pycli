@@ -3,16 +3,18 @@
 root = true
 
 [*]
-charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
-
-[*.{py, ini}]
 indent_style = space
 indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8
+end_of_line = lf
 
-[*.{json, yml, toml}]
+[*.bat]
+indent_style = tab
+end_of_line = crlf
+
+[*.{json, yml, yaml, toml}]
 indent_style = space
 indent_size = 2
 
@@ -21,3 +23,4 @@ trim_trailing_whitespace = false
 
 [Makefile]
 indent_style = tab
+indent_size = 8
