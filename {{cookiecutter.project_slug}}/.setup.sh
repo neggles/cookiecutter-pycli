@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "Setting up {{ cookiecutter.project_name }} repo in $(pwd)"
+repo_dir=$(pwd)
+
+echo "Setting up {{cookiecutter.project_name}} repo in ${repo_dir}"
 git init
 git add .
 git commit --quiet --message "Initial commit"
