@@ -16,5 +16,5 @@
     "Apache 2.0"
   ],
 
-  "__package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}"
+  "__package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"
 }

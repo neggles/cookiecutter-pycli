@@ -4,11 +4,13 @@
 from re import compile as re_compile
 from sys import exit as sys_exit
 
-re_module = re_compile(r"^[a-z][\w]+$")
+MODULE_REGEX = re_compile(r"^[_a-zA-Z][_a-zA-Z0-9]+$")
 
-module_name = "{{ cookiecutter.__package_name }}"
+# fmt: off
+module_name = '{{ cookiecutter.__package_name }}'
+# fmt: on
 
-if bool(re_module.match(module_name)) is not True:
+if not MODULE_REGEX.match(module_name):
     print(f"ERROR: {module_name} is not a valid Python module name!")
 
     # exits with status 1 to indicate failure
