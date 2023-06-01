@@ -3,7 +3,7 @@
   "email": "some@address.com",
   "github_username": "someguy",
   "project_name": "Python CLI",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "project_short_description": "{{ cookiecutter.project_name }}: a python CLI app",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "project_version": "0.0.1",
@@ -16,5 +16,5 @@
     "Apache 2.0"
   ],
 
-  "__package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"
+  "__package_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}"
 }
